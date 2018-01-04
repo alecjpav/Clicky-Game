@@ -1,0 +1,12 @@
+#instructions {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 8%;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+#instructions h2 {
+	font-size: 3.5em;
+}
