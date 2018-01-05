@@ -6,7 +6,8 @@ class GameArea extends Component {
 	state = {
 		score: 0,
 		guessed: [],
-    message: ""
+    message: "",
+    message2: ""
 	}
 
 	handleClick(e) {
@@ -17,11 +18,18 @@ class GameArea extends Component {
         guessed: [],
         message: "You lose!"
       })
+    } else if (this.state.score === 11) {
+      this.setState({
+        score: 0,
+        guessed: [],
+        message2: "You win!"
+      })
     } else {
       this.setState({
         score: this.state.score + 1,
         guessed: this.state.guessed.concat(clicked),
-        message: ""
+        message: "",
+        message2:""
       })
     }
 	}
@@ -31,7 +39,7 @@ class GameArea extends Component {
     dogsArray = shuffle(dogsArray, [])
 		return (
 			<div className="game">
-        <h2>Score: {this.state.score} <span className="message">{this.state.message}</span></h2>
+        <h2>Score: {this.state.score} <span className="message">{this.state.message}</span><span className="message2">{this.state.message2}</span></h2>
 				<div className="pics">
           { dogsArray.map(dog => (
               <Pic 
@@ -54,7 +62,7 @@ const Pic = props => {
 			<img 
 				src={props.link || "http://atlantahumane.org/wp-content/uploads/2013/06/golden-retriever.jpg"}
 				onClick={props.handleClick}
-				alt="game image"
+				alt="game"
 				data-id={props.id}
 				/>
 		</div>

@@ -8,6 +8,10 @@ h2 {
 	color: red;
 }
 
+.message2 {
+	color: green;
+}
+
 .pics {
 	display: flex;
 	flex-direction: row;
