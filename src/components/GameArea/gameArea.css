@@ -1,0 +1,32 @@
+h2 {
+	color: #232323;
+	margin-left: 2.5%;
+	text-align: center;
+}
+
+.message {
+	color: red;
+}
+
+.message2 {
+	color: green;
+}
+
+.pics {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.pics > * {
+	width: 20%;
+	margin-right: 2.5%;
+	margin-left: 2.5%;
+}
+
+.pic > img {
+	width: 100%;
+	height: auto;
+}
